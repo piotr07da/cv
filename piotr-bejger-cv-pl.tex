@@ -56,7 +56,7 @@
 
 \newcommand{\cvSectionEntryHeader}[4]
 {%
-	\hspace{26pt}\parbox{.93\textwidth}
+	\vspace{8pt}\hspace{26pt}\parbox{.93\textwidth}
 	{%
 		\fontsize{13pt}{1em}\selectfont #1 \hspace{2pt} #2 \hfill #3 {\segoesym ➔} #4 %
 	}\\
@@ -99,11 +99,9 @@
 	\end{minipage}
 }
 
+% PODSUMOWANIE KWALIFIKACJI
 \colorlet{sectionfg}{sectionfg0}
 \colorlet{sectionbg}{sectionbg0}
-
-% PODSUMOWANIE KWALIFIKACJI
-
 \cvSectionHeader{Podsumowanie kwalifikacji}
 
 \cvSectionEntry
@@ -122,15 +120,12 @@
 	}%
 }
 
+% DOSWIADCZENIE ZAWODOWE
 \colorlet{sectionfg}{sectionfg1}
 \colorlet{sectionbg}{sectionbg1}
-
-% DOSWIADCZENIE ZAWODOWE
-
 \cvSectionHeader{Doświadczenie zawodowe}
 
 % ProService Finteco
-
 \cvSectionEntry
 {
 	\cvSectionEntryHeader{❹}{ProService Finteco Sp. z o.o. (senior .NET developer / tech lead)}{2017-03}{\cdot\cdot\cdot}
@@ -146,7 +141,6 @@
 }
 
 % Bonair
-
 \cvSectionEntry
 {
 	\cvSectionEntryHeader{❸}{BONAIR S.A. (senior .NET developer)}{2013-07}{2017-02}
@@ -161,7 +155,6 @@
 }
 
 % Oponeo.pl
-
 \cvSectionEntry
 {
 	\cvSectionEntryHeader{❷}{OPONEO.PL S.A. (.NET developer)}{2010-01}{2013-06}
@@ -178,11 +171,11 @@
 			\item Zaprojektowanie i implementacja narzędzia do monitoringu infrastruktury (\textbf{C\#}, \textbf{WCF}, \textbf{Silverlight}). Monitorowanie stanu maszyn wirtualnych przy pomocy \textbf{WMI}. Monitorowanie i zarządzanie serwerem IIS przy pomocy biblioteki Microsoft.Web.Administration.
 			\item Wprowadzenie elementów programowania aspektowego (\textbf{AOP}) w kontekście walidacji argumentów metod. Rozwiązanie oparte o \textbf{Mono.Cecil}, pozwala na "wstrzykiwanie" odpowiednich fragmentów kodu walidującego w języku \textbf{MSIL}.
 		\end{itemize}
+		\vspace{49pt}
 	}
 }
 
 % T Komp
-
 \cvSectionEntry
 {
 	\cvSectionEntryHeader{❶}{T Komp (junior developer)}{2009-03}{2009-12}
@@ -200,7 +193,6 @@
 }
 
 % Centrum Onkologii
-
 \cvSectionEntry
 {
 	\cvSectionEntryHeader{⓿}{Centrum Onkologii w Bydgoszczy (sekretarz medyczny)}{2005-04}{2009-02}
@@ -214,47 +206,62 @@
 	}
 }
 
-
-
+% WYKSZTALCENIE
+\colorlet{sectionfg}{sectionfg0}
+\colorlet{sectionbg}{sectionbg0}
 \cvSectionHeader{Wykształcenie}
 
-\cvSectionEntryHeader{❶}{Politechnika Poznańska}{2008}{2010}
-
-\cvSectionEntryBody{}
+% Politechnika Poznanska
+\cvSectionEntry
 {
-	\begin{itemize}
-		\setlength\itemsep{0em}
-		\item Wydział Informatyki i Zarządzania • Kierunek: Informatyka
-		\item Uzyskany tytuł: magister (inżynieria komputerowa)
-		\item Praca magisterska: \textit{Implementacja teorii zbiorów przybliżonych w technologii Silverlight}
-	\end{itemize}
+	\cvSectionEntryHeader{❶}{Politechnika Poznańska}{2008}{2010}
+
+	\cvSectionEntryBody{}
+	{
+		\begin{itemize}
+			\setlength\itemsep{0em}
+			\item Wydział Informatyki i Zarządzania • Kierunek: Informatyka
+			\item Uzyskany tytuł: magister (inżynieria komputerowa)
+			\item Praca magisterska: \textit{Implementacja teorii zbiorów przybliżonych w technologii Silverlight}
+		\end{itemize}
+	}
 }
 
-\cvSectionEntryHeader{⓿}{Uniwersytet Kazimierza Wielkiego w Bydgoszczy}{2004}{2008}
-
-\cvSectionEntryBody{}
+% Uniwersytet Kazimierza Wielkiego
+\cvSectionEntry
 {
-	\begin{itemize}
-		\setlength\itemsep{0em}
-		\item Wydział Matematyki, Fizyki i Techniki • Kierunek: Informatyka
-		\item Uzyskany tytuł: inżynier
-		\item Praca inżynierska: \textit{Wykorzystanie sztucznej sieci neuronowej do prognozowania kursów walut}
-	\end{itemize}
+	\cvSectionEntryHeader{⓿}{Uniwersytet Kazimierza Wielkiego w Bydgoszczy}{2004}{2008}
+
+	\cvSectionEntryBody{}
+	{
+		\begin{itemize}
+			\setlength\itemsep{0em}
+			\item Wydział Matematyki, Fizyki i Techniki • Kierunek: Informatyka
+			\item Uzyskany tytuł: inżynier
+			\item Praca inżynierska: \textit{Wykorzystanie sztucznej sieci neuronowej do prognozowania kursów walut}
+		\end{itemize}
+	}
 }
 
+% DODATKOWE INFORMACJE
+\colorlet{sectionfg}{sectionfg1}
+\colorlet{sectionbg}{sectionbg1}
 \cvSectionHeader{Dodatkowe informacje}
 
-\cvEnuItemBox
+\cvSectionEntry
 {
-	\begin{itemize}
-		\setlength\itemsep{0em}
-		\item Znajomość języka angielskiego w stopniu komunikatywnym
-		\item Tworzenie gier mobilnych opartych o silnik Unity
-		\item Amatorskie programowanie mikrokontrolerów AVR
-		\item Certyfikaty Microsoft: MCSD, MCP, MS (2014)
-		\item Ukończony kurs Cisco Certified Network Associate (2008 {\segoesym ➔} 2009)
-		\item Prawo jazdy kategorii B
-	\end{itemize}
+	\cvEnuItemBox
+	{
+		\begin{itemize}
+			\setlength\itemsep{0em}
+			\item Znajomość języka angielskiego w stopniu komunikatywnym
+			\item Tworzenie gier mobilnych opartych o silnik Unity
+			\item Amatorskie programowanie mikrokontrolerów AVR
+			\item Certyfikaty Microsoft: MCSD, MCP, MS (2014)
+			\item Ukończony kurs Cisco Certified Network Associate (2008 {\segoesym ➔} 2009)
+			\item Prawo jazdy kategorii B
+		\end{itemize}
+	}
 }
 
 \center
