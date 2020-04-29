@@ -1,0 +1,108 @@
+\documentclass[a4paper,15pt]{letter}
+
+\usepackage{color}
+\usepackage{multicol}
+\usepackage{fontspec}
+\usepackage[margin=0cm]{geometry}
+\usepackage{showframe}
+
+\setmainfont{Segoe UI}
+
+\definecolor{white}{RGB}{255, 255, 255}
+\definecolor{darkgray}{RGB}{50, 51, 50}
+\definecolor{purple}{RGB}{104, 42, 123}
+\definecolor{cyan}{RGB}{14, 177, 146}
+
+\newcommand{\cvSectionHeader}[1]
+{
+\begin{flushright}
+	\vspace{12pt}
+	{\fontsize{19pt}{1em}\addfontfeature{LetterSpace=9.0}\selectfont #1 \hspace*{16pt}}
+	\vspace{2pt}
+\end{flushright}
+}
+
+\newcommand{\cvSectionEntryHeader}[4]
+{
+	\hspace{28pt}\parbox{.8\textwidth}
+	{
+		\fontsize{12pt}{1em}\selectfont
+		#1 #2 #3 ➔ #4
+	}
+}
+
+\begin{document}
+
+\colorbox{purple}
+{
+	\color{white}
+	\begin{minipage}[c]{\textwidth}
+		\vspace{20pt}
+			\begin{minipage}[c]{0.37\textwidth}
+				\hfill\vfill
+			\end{minipage} %
+			\begin{minipage}[c]{0.27\textwidth}
+				{\fontsize{50pt}{1em}\addfontfeature{LetterSpace=9.0}\selectfont PIOTR} \vspace{11pt}\\
+				{\fontsize{16pt}{1em}\addfontfeature{LetterSpace=42.5}\selectfont 731-444-160}\\
+				\hfill\vfill
+			\end{minipage} %
+			\begin{minipage}[c]{0.01\textwidth}
+				\hfill\vfill
+			\end{minipage} %
+			\begin{minipage}[c]{0.34\textwidth}
+				{\fontsize{16pt}{1em}\addfontfeature{LetterSpace=5.2}\selectfont piotr.bejger@gmail.com} \vspace{11pt}\\
+				{\fontsize{50pt}{1em}\addfontfeature{LetterSpace=9.0}\selectfont BEJGER}\\
+				\hfill\vfill
+			\end{minipage} %
+			\begin{minipage}[c]{0.01\textwidth}
+				\hfill\vfill
+			\end{minipage} %
+		\vspace{8pt}
+	\end{minipage}
+}
+
+\cvSectionHeader{Podsumowanie kwalifikacji}
+
+\hspace{32pt}\parbox{.5\textwidth}
+{
+► Znajomość języków: C\# (oraz Sql, Dart, C/C++, Js, Html, Css) \\
+► Doświadczenie w OOP \\
+► Doświadczenie w TDD \\
+► Znajomość: DDD, Event Sourcing \\
+► Znajomość: .NET (framework/core), WPF (MVVM), WCF, WF \\
+► Znajomość: Azure DevOps, Git \\
+► Tworzenie aplikacji internetowych ASP.NET \\
+► Znajomość środowisk: MS VisualStudio, MS SQL Server
+}
+
+\cvSectionEntryHeader{❹}{ProService Finteco Sp. z o.o. (senior .NET developer / tech lead)}{2017-03}{...}
+
+\cvSectionEntryHeader{❸}{BONAIR S.A. (senior .NET developer)}{2013-07}{2017-02}
+
+\cvSectionEntryHeader{❷}{OPONEO.PL S.A. (.NET developer)}{2010-01}{2013-06}
+
+\cvSectionEntryHeader{❶}{T Komp (junior developer)}{2009-03}{2009-12}
+
+\cvSectionEntryHeader{⓿}{Centrum Onkologii w Bydgoszczy (sekretarz medyczny)}{2005-04}{2009-02}
+
+\cvSectionHeader{Doświadczenie zawodowe}
+
+\cvSectionHeader{Wykształcenie}
+
+\cvSectionHeader{Dodatkowe informacje}
+
+
+
+\center
+{
+	\parbox{.9\textwidth}
+	{
+		\center
+		{
+			\fontsize{9pt}{1em}\selectfont
+			Wyrażam zgodę na przetwarzanie moich danych osobowych zawartych w ofercie pracy dla potrzeb procesu rekrutacji zgodnie z ustawą z dnia 27.08.1997r. Dz. U. z 2002 r., Nr 101, poz. 923 ze zm.
+		}
+	}
+}
+
+\end{document}
