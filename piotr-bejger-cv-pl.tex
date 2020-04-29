@@ -1,58 +1,80 @@
-\documentclass[a4paper,11pt]{letter}
+\documentclass[a4paper,11pt]{report}
 
-\usepackage{color}
+\usepackage{xcolor}
 \usepackage{multicol}
 \usepackage{fontspec}
-\usepackage[margin=0cm]{geometry}
-\usepackage{showframe}
+\usepackage[a4paper,margin=0cm]{geometry}
+%\usepackage{showframe}
 
 \setmainfont{Segoe UI}
 \newfontfamily{\segoesym}{Segoe UI Symbol}
 
-\definecolor{white}{RGB}{255, 255, 255}
-\definecolor{darkgray}{RGB}{50, 51, 50}
-\definecolor{purple}{RGB}{104, 42, 123}
-\definecolor{cyan}{RGB}{14, 177, 146}
+\definecolor{titlefg}{RGB}{250, 247, 251}
+\definecolor{titlebg}{RGB}{104, 42, 123}
+\definecolor{sectionfg0}{RGB}{0, 0, 0}
+\definecolor{sectionbg0}{RGB}{255, 255, 255}
+\definecolor{sectionfg1}{RGB}{248, 250, 249}
+\definecolor{sectionbg1}{RGB}{82, 128, 120}
+
+\addtolength{\voffset}{-8pt}
+\addtolength{\hoffset}{-17pt}
+
+\renewcommand{\labelitemi}{$►$}
+
+\newcommand{\cvEnuItemBox}[1]
+{%
+	\hspace{26pt}\parbox{.93\textwidth}{#1}
+}
 
 \newcommand{\cvSectionHeader}[1]
-{
-\begin{flushright}
-	\vspace{12pt}
-	{\fontsize{19pt}{1em}\addfontfeature{LetterSpace=9.0}\selectfont #1 \hspace*{16pt}}
-	\vspace{2pt}
-\end{flushright}
+{%
+	\setlength{\fboxsep}{0pt}%
+	\setlength{\fboxrule}{0pt}%
+	\colorbox{sectionbg}
+	{%
+		\color{sectionfg}%
+		\begin{minipage}[t]{\textwidth}
+			\begin{flushright}\vspace{12pt}
+			{\fontsize{19pt}{1em}\addfontfeature{LetterSpace=7.0}\selectfont #1\hspace*{16pt}}\vspace{2pt}
+			\end{flushright}%
+		\end{minipage}%
+	}%
+}
+
+\newcommand{\cvSectionEntry}[1]
+{%
+	\setlength{\fboxsep}{0pt}%
+	\setlength{\fboxrule}{0pt}%
+	\colorbox{sectionbg}
+	{%
+		\color{sectionfg}%
+		\begin{minipage}[t]{\textwidth}
+			#1 %
+		\end{minipage}%
+	}%
 }
 
 \newcommand{\cvSectionEntryHeader}[4]
-{
-	\hspace{26pt}\parbox{.92\textwidth}
-	{
-		\fontsize{13pt}{1em}\selectfont
-		#1 \hspace{2pt} #2 \hfill #3 {\segoesym ➔} #4
+{%
+	\hspace{26pt}\parbox{.93\textwidth}
+	{%
+		\fontsize{13pt}{1em}\selectfont #1 \hspace{2pt} #2 \hfill #3 {\segoesym ➔} #4 %
 	}\\
 }
 
-\newcommand{\cvEnuItem}[1]
-{
-►\hspace{10pt}\parbox{1\linewidth}{#1}\\
+\newcommand{\cvSectionEntryBody}[2]
+{%
+	\cvEnuItemBox{\hspace{27pt}#1#2}
 }
 
-\newcommand{\cvAchievements}[1]
-{
-	\hspace{34pt}\parbox{.87\textwidth}
-	{
 
-\hspace{19pt}Wybrane osiągnięcia:\\\\
-#1
-	}
-}
 
 \begin{document}
 
-\colorbox{purple}
+\colorbox{titlebg}
 {
-	\color{white}
-	\begin{minipage}[c]{\textwidth}
+	\color{titlefg}
+	\begin{minipage}[t]{\textwidth}
 		\vspace{20pt}
 			\begin{minipage}[c]{0.37\textwidth}
 				\hfill\vfill
@@ -77,43 +99,163 @@
 	\end{minipage}
 }
 
+\colorlet{sectionfg}{sectionfg0}
+\colorlet{sectionbg}{sectionbg0}
+
+% PODSUMOWANIE KWALIFIKACJI
+
 \cvSectionHeader{Podsumowanie kwalifikacji}
 
-\hspace{34pt}\parbox{.9\textwidth}
-{
-\cvEnuItem{Znajomość języków: \textbf{C\#} (oraz Sql, Dart, C/C++, Js, Html, Css)}
-\cvEnuItem{Doświadczenie w \textbf{OOP}}
-\cvEnuItem{Doświadczenie w \textbf{TDD}}
-\cvEnuItem{Znajomość: \textbf{DDD}, \textbf{Event Sourcing}}
-\cvEnuItem{Znajomość: \textbf{.NET} (framework/core), WPF (MVVM), WCF, WF, ASP.NET}
-\cvEnuItem{Znajomość: Azure DevOps, Git}
+\cvSectionEntry
+{	
+	\cvEnuItemBox
+	{
+		\begin{itemize}
+			\setlength\itemsep{0em}
+			\item Znajomość języków: \textbf{C\#} (oraz Sql, Dart, C/C++, Js, Html, Css)
+			\item Doświadczenie w \textbf{OOP}
+			\item Doświadczenie w \textbf{TDD}
+			\item Znajomość: \textbf{DDD}, \textbf{Event Sourcing}
+			\item Znajomość: \textbf{.NET} (framework/core), WPF (MVVM), WCF, WF, ASP.NET
+			\item Znajomość: Azure DevOps, Git
+		\end{itemize}
+	}%
 }
+
+\colorlet{sectionfg}{sectionfg1}
+\colorlet{sectionbg}{sectionbg1}
+
+% DOSWIADCZENIE ZAWODOWE
 
 \cvSectionHeader{Doświadczenie zawodowe}
 
-\cvSectionEntryHeader{❹}{ProService Finteco Sp. z o.o. (senior .NET developer / tech lead)}{2017-03}{\hspace{10pt}\cdot\cdot\cdot\hspace{10pt}}
+% ProService Finteco
 
-\cvAchievements
+\cvSectionEntry
 {
-\cvEnuItem{Projekt i implementacja dedykowanego mechanizmu logowania przebiegu procesów biznesowych, stosowanego do analizy wydajności i prawidłowości ich działania. (C\#, .NET, MSSQL)}
+	\cvSectionEntryHeader{❹}{ProService Finteco Sp. z o.o. (senior .NET developer / tech lead)}{2017-03}{\cdot\cdot\cdot}
+
+	\cvSectionEntryBody{Wybrane osiągnięcia:}
+	{
+		\begin{itemize}
+			\setlength\itemsep{0em}
+			\item one
+			\item two
+		\end{itemize}
+	}
 }
 
+% Bonair
 
-\cvSectionEntryHeader{❸}{BONAIR S.A. (senior .NET developer)}{2013-07}{2017-02}
+\cvSectionEntry
+{
+	\cvSectionEntryHeader{❸}{BONAIR S.A. (senior .NET developer)}{2013-07}{2017-02}
 
-\cvSectionEntryHeader{❷}{OPONEO.PL S.A. (.NET developer)}{2010-01}{2013-06}
+	\cvSectionEntryBody{Wybrane osiągnięcia:}
+	{
+		\begin{itemize}
+			\setlength\itemsep{0em}
+			\item Projekt i implementacja dedykowanego mechanizmu logowania przebiegu procesów biznesowych, stosowanego do analizy wydajności i prawidłowości ich działania. (C\#, .NET, MSSQL)
+		\end{itemize}
+	}
+}
 
-\cvSectionEntryHeader{❶}{T Komp (junior developer)}{2009-03}{2009-12}
+% Oponeo.pl
 
-\cvSectionEntryHeader{⓿}{Centrum Onkologii w Bydgoszczy (sekretarz medyczny)}{2005-04}{2009-02}
+\cvSectionEntry
+{
+	\cvSectionEntryHeader{❷}{OPONEO.PL S.A. (.NET developer)}{2010-01}{2013-06}
+
+	\cvSectionEntryBody{Wybrane osiągnięcia:}
+	{
+		\begin{itemize}
+			\setlength\itemsep{0em}
+			\item Stworzenie od podstaw sklepu Felgi.pl. Implementacja w języku \textbf{C\#} w technologii \textbf{.NET 4.0}, w oparciu o autorski framework aplikacji web. Projekt i implementacja wszystkich algorytmów warstwy logiki biznesowej (\textbf{C\#} i \textbf{Sql}).
+			\item Optymalizacja aplikacji Oponeo.pl, Opony.com i innych. Całość wprowadzonych zabiegów optymalizacyjnych, pozwoliła na 10-krotne zwiększenie liczby obsługiwanych użytkowników. Narzędzia wykorzystane w celach diagnostycznych to \textbf{ANTS Performance} i \textbf{Memory Profiler}.
+			\item Wdrożenie testów jednostkowych. Zastosowany framework to \textbf{NUnit}.
+			\item Implementacja narzędzia analitycznego, rejestrującego akcje użytkowników na stronach (ruchy myszką, kliknięcia, przejścia pomiędzy stronami). Implementacja oparta o \textbf{WCF}, \textbf{Ajax}, \textbf{jQuery}.
+			\item Zbudowanie modułu komunikacji pomiędzy instancjami aplikacji w środowisku opartym o load balancing. W tym celu wykorzystanie technologii \textbf{WCF} oraz \textbf{iControl API} (infrastruktura oparta o BIG-IP LTM firmy \textbf{F5}).
+			\item Zaprojektowanie i implementacja narzędzia do monitoringu infrastruktury (\textbf{C\#}, \textbf{WCF}, \textbf{Silverlight}). Monitorowanie stanu maszyn wirtualnych przy pomocy \textbf{WMI}. Monitorowanie i zarządzanie serwerem IIS przy pomocy biblioteki Microsoft.Web.Administration.
+			\item Wprowadzenie elementów programowania aspektowego (\textbf{AOP}) w kontekście walidacji argumentów metod. Rozwiązanie oparte o \textbf{Mono.Cecil}, pozwala na "wstrzykiwanie" odpowiednich fragmentów kodu walidującego w języku \textbf{MSIL}.
+		\end{itemize}
+	}
+}
+
+% T Komp
+
+\cvSectionEntry
+{
+	\cvSectionEntryHeader{❶}{T Komp (junior developer)}{2009-03}{2009-12}
+
+	\cvSectionEntryBody{Wybrane osiągnięcia:}
+	{
+		\begin{itemize}
+			\setlength\itemsep{0em}
+			\item Stworzenie (analiza, projekt, implementacja) systemu wspomagającego proces wytwarzania opakowań w firmie Reckitt Benckiser (ASP, VB, JavaScript, Sql).
+			\item Praca nad rozwojem NND Dynamic (jako główny programista), jednego z modułów systemu NND (flagowy produkt firmy).
+			\item Realizacja projektów: “Suppliers Assortment”, “Trainings” oraz “Holiday Request” dla Reckitt Benckiser; “Szkolenia BHP” dla Mondi Świecie; “Formularz Zgłoszeniowy” dla Smurfit Kappa.
+			\item Główny udział w tworzeniu systemu EOD dla firmy Nutricia. Projekt obejmował realizację procesu rejestracji kontraktów, zamówień oraz faktur.
+		\end{itemize}
+	}
+}
+
+% Centrum Onkologii
+
+\cvSectionEntry
+{
+	\cvSectionEntryHeader{⓿}{Centrum Onkologii w Bydgoszczy (sekretarz medyczny)}{2005-04}{2009-02}
+
+	\cvSectionEntryBody{Zakres obowiązków:}
+	{
+		\begin{itemize}
+			\setlength\itemsep{0em}
+			\item Nadzór dokumentacji medycznej.
+		\end{itemize}
+	}
+}
 
 
 
 \cvSectionHeader{Wykształcenie}
 
+\cvSectionEntryHeader{❶}{Politechnika Poznańska}{2008}{2010}
+
+\cvSectionEntryBody{}
+{
+	\begin{itemize}
+		\setlength\itemsep{0em}
+		\item Wydział Informatyki i Zarządzania • Kierunek: Informatyka
+		\item Uzyskany tytuł: magister (inżynieria komputerowa)
+		\item Praca magisterska: \textit{Implementacja teorii zbiorów przybliżonych w technologii Silverlight}
+	\end{itemize}
+}
+
+\cvSectionEntryHeader{⓿}{Uniwersytet Kazimierza Wielkiego w Bydgoszczy}{2004}{2008}
+
+\cvSectionEntryBody{}
+{
+	\begin{itemize}
+		\setlength\itemsep{0em}
+		\item Wydział Matematyki, Fizyki i Techniki • Kierunek: Informatyka
+		\item Uzyskany tytuł: inżynier
+		\item Praca inżynierska: \textit{Wykorzystanie sztucznej sieci neuronowej do prognozowania kursów walut}
+	\end{itemize}
+}
+
 \cvSectionHeader{Dodatkowe informacje}
 
-
+\cvEnuItemBox
+{
+	\begin{itemize}
+		\setlength\itemsep{0em}
+		\item Znajomość języka angielskiego w stopniu komunikatywnym
+		\item Tworzenie gier mobilnych opartych o silnik Unity
+		\item Amatorskie programowanie mikrokontrolerów AVR
+		\item Certyfikaty Microsoft: MCSD, MCP, MS (2014)
+		\item Ukończony kurs Cisco Certified Network Associate (2008 {\segoesym ➔} 2009)
+		\item Prawo jazdy kategorii B
+	\end{itemize}
+}
 
 \center
 {
@@ -126,5 +268,7 @@
 		}
 	}
 }
+
+\vfill
 
 \end{document}
