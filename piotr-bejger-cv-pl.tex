@@ -1,4 +1,4 @@
-\documentclass[a4paper,15pt]{letter}
+\documentclass[a4paper,11pt]{letter}
 
 \usepackage{color}
 \usepackage{multicol}
@@ -7,6 +7,7 @@
 \usepackage{showframe}
 
 \setmainfont{Segoe UI}
+\newfontfamily{\segoesym}{Segoe UI Symbol}
 
 \definecolor{white}{RGB}{255, 255, 255}
 \definecolor{darkgray}{RGB}{50, 51, 50}
@@ -24,10 +25,24 @@
 
 \newcommand{\cvSectionEntryHeader}[4]
 {
-	\hspace{28pt}\parbox{.8\textwidth}
+	\hspace{26pt}\parbox{.92\textwidth}
 	{
-		\fontsize{12pt}{1em}\selectfont
-		#1 #2 #3 ➔ #4
+		\fontsize{13pt}{1em}\selectfont
+		#1 \hspace{2pt} #2 \hfill #3 {\segoesym ➔} #4
+	}\\
+}
+
+\newcommand{\cvEnuItem}[1]
+{
+►\hspace{10pt}\parbox{1\linewidth}{#1}\\
+}
+
+\newcommand{\cvAchievements}[1]
+{
+	\hspace{30pt}\parbox{.9\textwidth}
+	{
+Wybrane osiągnięcia:\\
+#1
 	}
 }
 
@@ -63,19 +78,24 @@
 
 \cvSectionHeader{Podsumowanie kwalifikacji}
 
-\hspace{32pt}\parbox{.5\textwidth}
+\hspace{30pt}\parbox{.9\textwidth}
 {
-► Znajomość języków: C\# (oraz Sql, Dart, C/C++, Js, Html, Css) \\
-► Doświadczenie w OOP \\
-► Doświadczenie w TDD \\
-► Znajomość: DDD, Event Sourcing \\
-► Znajomość: .NET (framework/core), WPF (MVVM), WCF, WF \\
-► Znajomość: Azure DevOps, Git \\
-► Tworzenie aplikacji internetowych ASP.NET \\
-► Znajomość środowisk: MS VisualStudio, MS SQL Server
+\cvEnuItem{Znajomość języków: \textbf{C\#} (oraz Sql, Dart, C/C++, Js, Html, Css)}
+\cvEnuItem{Doświadczenie w \textbf{OOP}}
+\cvEnuItem{Doświadczenie w \textbf{TDD}}
+\cvEnuItem{Znajomość: \textbf{DDD}, \textbf{Event Sourcing}}
+\cvEnuItem{Znajomość: \textbf{.NET} (framework/core), WPF (MVVM), WCF, WF, ASP.NET}
+\cvEnuItem{Znajomość: Azure DevOps, Git}
 }
 
-\cvSectionEntryHeader{❹}{ProService Finteco Sp. z o.o. (senior .NET developer / tech lead)}{2017-03}{...}
+\cvSectionHeader{Doświadczenie zawodowe}
+
+\cvSectionEntryHeader{❹}{ProService Finteco Sp. z o.o. (senior .NET developer / tech lead)}{2017-03}{\hspace{10pt}\cdot\cdot\cdot\hspace{10pt}}
+\cvAchievements
+{
+\cvEnuItem{Projekt i implementacja dedykowanego mechanizmu logowania przebiegu procesów biznesowych, stosowanego do analizy wydajności i prawidłowości ich działania. (C\#, .NET, MSSQL)}
+}
+
 
 \cvSectionEntryHeader{❸}{BONAIR S.A. (senior .NET developer)}{2013-07}{2017-02}
 
@@ -85,7 +105,7 @@
 
 \cvSectionEntryHeader{⓿}{Centrum Onkologii w Bydgoszczy (sekretarz medyczny)}{2005-04}{2009-02}
 
-\cvSectionHeader{Doświadczenie zawodowe}
+
 
 \cvSectionHeader{Wykształcenie}
 
