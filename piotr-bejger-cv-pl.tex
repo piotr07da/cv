@@ -1,4 +1,4 @@
-\documentclass[a4paper,11pt]{report}
+\documentclass[a4paper,11pt]{article}
 
 \usepackage{xcolor}
 \usepackage{multicol}
@@ -9,17 +9,24 @@
 \setmainfont{Segoe UI}
 \newfontfamily{\segoesym}{Segoe UI Symbol}
 
-\definecolor{titlefg}{RGB}{250, 247, 251}
-\definecolor{titlebg}{RGB}{104, 42, 123}
-\definecolor{sectionfg0}{RGB}{0, 0, 0}
-\definecolor{sectionbg0}{RGB}{255, 255, 255}
-\definecolor{sectionfg1}{RGB}{248, 250, 249}
-\definecolor{sectionbg1}{RGB}{82, 128, 120}
-
-\addtolength{\voffset}{-8pt}
-\addtolength{\hoffset}{-17pt}
+\definecolor{fg0}{RGB}{0, 0, 0}
+\definecolor{bg0}{RGB}{255, 255, 255}
+\definecolor{fg1}{RGB}{248, 250, 249}
+\definecolor{bg1}{RGB}{82, 128, 120}
 
 \renewcommand{\labelitemi}{$►$}
+
+\newcommand{\switchColors}[0]
+{
+	\colorlet{tmpfg}{fg0}
+	\colorlet{tmpbg}{bg0}
+	\colorlet{fg0}{fg1}
+	\colorlet{bg0}{bg1}
+	\colorlet{fg1}{tmpfg}
+	\colorlet{bg1}{tmpbg}
+	\colorlet{fg}{fg0}
+	\colorlet{bg}{bg0}
+}
 
 \newcommand{\cvEnuItemBox}[1]
 {%
@@ -28,14 +35,15 @@
 
 \newcommand{\cvSectionHeader}[1]
 {%
-	\setlength{\fboxsep}{0pt}%
-	\setlength{\fboxrule}{0pt}%
-	\colorbox{sectionbg}
+	\noindent\setlength{\fboxsep}{0pt}\setlength{\fboxrule}{0pt}%
+	\colorbox{bg}
 	{%
-		\color{sectionfg}%
+		\color{fg}%
 		\begin{minipage}[t]{\textwidth}
 			\begin{flushright}\vspace{12pt}
+			\vspace{6pt}%
 			{\fontsize{19pt}{1em}\addfontfeature{LetterSpace=7.0}\selectfont #1\hspace*{16pt}}\vspace{2pt}
+			\vspace{4pt}%
 			\end{flushright}%
 		\end{minipage}%
 	}%
@@ -43,11 +51,10 @@
 
 \newcommand{\cvSectionEntry}[1]
 {%
-	\setlength{\fboxsep}{0pt}%
-	\setlength{\fboxrule}{0pt}%
-	\colorbox{sectionbg}
+	\vspace{-1pt}\noindent\setlength{\fboxsep}{0pt}\setlength{\fboxrule}{0pt}%
+	\colorbox{bg}
 	{%
-		\color{sectionfg}%
+		\color{fg}%
 		\begin{minipage}[t]{\textwidth}
 			#1 %
 		\end{minipage}%
@@ -71,9 +78,11 @@
 
 \begin{document}
 
-\colorbox{titlebg}
+\switchColors
+
+\vspace*{-22pt}\noindent\colorbox{bg}
 {
-	\color{titlefg}
+	\color{fg}
 	\begin{minipage}[t]{\textwidth}
 		\vspace{20pt}
 			\begin{minipage}[c]{0.37\textwidth}
@@ -100,8 +109,7 @@
 }
 
 % PODSUMOWANIE KWALIFIKACJI
-\colorlet{sectionfg}{sectionfg0}
-\colorlet{sectionbg}{sectionbg0}
+\switchColors
 \cvSectionHeader{Podsumowanie kwalifikacji}
 
 \cvSectionEntry
@@ -121,8 +129,7 @@
 }
 
 % DOSWIADCZENIE ZAWODOWE
-\colorlet{sectionfg}{sectionfg1}
-\colorlet{sectionbg}{sectionbg1}
+\switchColors
 \cvSectionHeader{Doświadczenie zawodowe}
 
 % ProService Finteco
@@ -171,7 +178,6 @@
 			\item Zaprojektowanie i implementacja narzędzia do monitoringu infrastruktury (\textbf{C\#}, \textbf{WCF}, \textbf{Silverlight}). Monitorowanie stanu maszyn wirtualnych przy pomocy \textbf{WMI}. Monitorowanie i zarządzanie serwerem IIS przy pomocy biblioteki Microsoft.Web.Administration.
 			\item Wprowadzenie elementów programowania aspektowego (\textbf{AOP}) w kontekście walidacji argumentów metod. Rozwiązanie oparte o \textbf{Mono.Cecil}, pozwala na "wstrzykiwanie" odpowiednich fragmentów kodu walidującego w języku \textbf{MSIL}.
 		\end{itemize}
-		\vspace{49pt}
 	}
 }
 
@@ -207,8 +213,7 @@
 }
 
 % WYKSZTALCENIE
-\colorlet{sectionfg}{sectionfg0}
-\colorlet{sectionbg}{sectionbg0}
+\switchColors
 \cvSectionHeader{Wykształcenie}
 
 % Politechnika Poznanska
@@ -244,8 +249,7 @@
 }
 
 % DODATKOWE INFORMACJE
-\colorlet{sectionfg}{sectionfg1}
-\colorlet{sectionbg}{sectionbg1}
+\switchColors
 \cvSectionHeader{Dodatkowe informacje}
 
 \cvSectionEntry
