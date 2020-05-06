@@ -4,6 +4,8 @@
 \usepackage{multicol}
 \usepackage{fontspec}
 \usepackage[a4paper,margin=0cm]{geometry}
+\usepackage[polish]{babel} %polish lang
+\usepackage{polski} %lamanie wyrazow jezyka polskiego
 %\usepackage{showframe}
 
 \setmainfont{Segoe UI}
@@ -13,6 +15,9 @@
 \definecolor{bg0}{RGB}{255, 255, 255}
 \definecolor{fg1}{RGB}{248, 250, 249}
 \definecolor{bg1}{RGB}{82, 128, 120}
+% w celu wyłączenia kolorów trzeba odkomentować poniższe linie
+%\colorlet{fg1}{fg0}
+%\colorlet{bg1}{bg0}
 
 \renewcommand{\labelitemi}{$►$}
 
@@ -117,15 +122,15 @@
 	\cvEnuItemBox
 	{
 		\begin{itemize}
-			\setlength\itemsep{0em}
-			\item Programowanie z dużym naciskiem na dobrą jakość kodu, zasady \textbf{SOLID} oraz inne dobre praktyki
-			\item Znajomość języków: \textbf{C\#} (oraz Sql, VB, Dart, C/C++, Js, Html, Css)
-			\item Doświadczenie w \textbf{OOP}
-			\item Doświadczenie w \textbf{TDD}
-			\item Znajomość: \textbf{DDD}, \textbf{CQRS}, \textbf{Event Sourcing}
-			\item Znajomość: \textbf{.NET} (framework/core), WPF (MVVM), WCF, WF, ASP.NET
-			\item Znajomość: \textbf{Azure DevOps}, \textbf{Git}
-			\item Doświadczenie w pracy w oparciu o \textbf{Scrum/Agile}
+			\setlength\itemsep{-1pt}
+			\item Programowanie z dużym naciskiem na dobrą jakość kodu, zasady \textbf{SOLID} oraz inne dobre praktyki.
+			\item Znajomość języków: \textbf{C\#} oraz Sql, VB, Dart, C/C++, Js, Html, Css.
+			\item Doświadczenie w \textbf{OOP}.
+			\item Doświadczenie w \textbf{TDD}.
+			\item Znajomość: \textbf{DDD, CQRS, Event Sourcing}.
+			\item Znajomość: \textbf{.NET} (framework/core), WPF (MVVM), WCF, WF, ASP.NET.
+			\item Znajomość: \textbf{Azure DevOps, Git}.
+			\item Doświadczenie w pracy w oparciu o \textbf{Scrum/Agile}.
 		\end{itemize}
 	}%
 }
@@ -142,11 +147,11 @@
 	\cvSectionEntryBody{Wybrane osiągnięcia:}
 	{
 		\begin{itemize}
-			\setlength\itemsep{0em}
+			\setlength\itemsep{-1pt}
 			\item Objęcie roli tech leadera w zespole.
 			\item Istotne zwiększenie jakości kodu poprzez wdrażanie zasad \textbf{SOLID} i innych dobrych praktyk.
-			\item Usunięcie około 70\% legacy codu przy zachowaniu pełnej funkcjonalności systemu dzięki czemu znacząco wzrosła utrzymywalność kodu i zmalał koszt developmentu kolejnych funkcjonalności.
-			\item Stworzenie mechanizmów i narzędzi do ułatwienia zarządzania konfiguracją systemu zarówno na środowiskach developerskich jak i produkcyjnych. Dzięki temu uzyskanie sprawniejszego i mniej ryzykownego deploymentu.
+			\item Usunięcie około 70\% legacy codu przy zachowaniu pełnej funkcjonalności systemu, dzięki czemu znacząco wzrosła utrzymywalność kodu i zmalał koszt developmentu kolejnych funkcjonalności.
+			\item Stworzenie mechanizmów i narzędzi do ułatwienia zarządzania konfiguracją systemu zarówno na środowiskach developerskich, jak i produkcyjnych. Dzięki temu uzyskano sprawniejszy i mniej ryzykowny deployment.
 		\end{itemize}
 	}
 }
@@ -159,17 +164,17 @@
 	\cvSectionEntryBody{Wybrane osiągnięcia:}
 	{
 		\begin{itemize}
-			\setlength\itemsep{0em}
+			\setlength\itemsep{-1pt}
 			\item Rozwój i modernizacja systemu CasePro (system do modelowania procesów biznesowych).
 			\item Istotne zwiększenie jakości kodu poprzez wdrażanie zasad \textbf{SOLID} i innych dobrych praktyk.
 			\item Wdrożenie \textbf{testów jednostkowych}. Wdrożenie \textbf{TDD} w pewnych obszarach systemu CasePro.
-			\item Projekt i implementacja dedykowanego mechanizmu logowania przebiegu procesów biznesowych, stosowanego do analizy wydajności i prawidłowości ich działania. (\textbf{C\#}, \textbf{.NET}, \textbf{MsSql})
-			\item Integracja systemów zewnętrznych KRD, BIK, Asseco DEF z CasePro. (\textbf{WF}, \textbf{WCF})
-			\item Stworzenie aplikacji do wysyłania JPK (jednolitych plików kontrolnych).
-			\item Stworzenie aplikacji pozwalającej rejestrować zdarzenia komunikacyjne w Krakowie dla MPK Kraków. (\textbf{WPF}, \textbf{WCF})
+			\item Projekt i implementacja dedykowanego mechanizmu logowania przebiegu procesów biznesowych, stosowanego do analizy wydajności i prawidłowości ich działania. [\textbf{C\#, .NET, MsSql}]
+			\item Integracja systemów zewnętrznych KRD, BIK, Asseco DEF z CasePro. [\textbf{WF, WCF}]
+			\item Stworzenie aplikacji do wysyłania JPK (jednolitych plików kontrolnych). [\textbf{WPF}]
+			\item Stworzenie aplikacji pozwalającej rejestrować zdarzenia komunikacyjne w Krakowie dla MPK Kraków. [\textbf{WPF, WCF}]
 		\end{itemize}
 	}
-	\vspace{47mm}
+	\vspace{53mm}
 }
 
 \pagebreak\vspace*{-11pt}
@@ -182,13 +187,13 @@
 	\cvSectionEntryBody{Wybrane osiągnięcia:}
 	{
 		\begin{itemize}
-			\setlength\itemsep{0em}
-			\item Stworzenie od podstaw sklepu Felgi.pl. Implementacja w języku \textbf{C\#} w technologii \textbf{.NET 4.0}, w oparciu o autorski framework aplikacji web. Projekt i implementacja wszystkich algorytmów warstwy logiki biznesowej (\textbf{C\#} i \textbf{Sql}).
+			\setlength\itemsep{-1pt}
+			\item Stworzenie od podstaw sklepu Felgi.pl. Implementacja w języku \textbf{C\#} w technologii \textbf{.NET} 4.0, w oparciu o autorski framework aplikacji web. Projekt i implementacja wszystkich algorytmów warstwy logiki biznesowej. [\textbf{C\#} i \textbf{Sql}]
 			\item Optymalizacja sklepów Oponeo.pl, Opony.com i innych -- 10-krotne zwiększenie liczby obsługiwanych użytkowników. Narzędzia wykorzystane w celach diagnostycznych to \textbf{ANTS Performance} i \textbf{Memory Profiler}.
 			\item Wdrożenie \textbf{testów jednostkowych}. Zastosowany framework to \textbf{NUnit}.
-			\item Implementacja narzędzia analitycznego, rejestrującego akcje użytkowników na stronach (ruchy myszką, kliknięcia, nawigacja pomiędzy stronami). Implementacja oparta o \textbf{WCF}, \textbf{Ajax}, \textbf{jQuery}.
+			\item Implementacja narzędzia analitycznego, rejestrującego akcje użytkowników na stronach (ruchy myszką, kliknięcia, nawigacja pomiędzy stronami). [\textbf{WCF, Ajax, jQuery}]
 			\item Zbudowanie modułu komunikacji pomiędzy instancjami aplikacji działającymi w środowisku opartym o load balancing. W tym celu wykorzystanie \textbf{WCF} oraz \textbf{iControl API} (infrastruktura oparta o BIG-IP LTM firmy \textbf{F5}).
-			\item Zaprojektowanie i implementacja narzędzia (\textbf{C\#}, \textbf{WCF}, \textbf{Silverlight}) do monitorowania stanu maszyn wirtualnych przy pomocy \textbf{WMI} oraz zarządzania serwerem IIS przy pomocy biblioteki Microsoft.Web.Administration.
+			\item Zaprojektowanie i implementacja narzędzia [\textbf{C\#, WCF, Silverlight}] do monitorowania stanu maszyn wirtualnych przy pomocy \textbf{WMI} oraz zarządzania serwerem \textbf{IIS} przy pomocy biblioteki Microsoft.Web.Administration.
 			\item Wprowadzenie elementów programowania aspektowego (\textbf{AOP}) w kontekście walidacji argumentów metod. Rozwiązanie oparte o \textbf{Mono.Cecil}, pozwala na ``wstrzykiwanie`` kodu walidującego w języku \textbf{MSIL}.
 		\end{itemize}
 	}
@@ -202,8 +207,8 @@
 	\cvSectionEntryBody{Wybrane osiągnięcia:}
 	{
 		\begin{itemize}
-			\setlength\itemsep{0em}
-			\item Stworzenie (analiza, projekt i implementacja) systemu wspomagającego proces wytwarzania opakowań w firmie Reckitt Benckiser (ASP, VB, JavaScript, \textbf{Sql}).
+			\setlength\itemsep{-1pt}
+			\item Stworzenie (analiza, projekt i implementacja) systemu wspomagającego proces wytwarzania opakowań w firmie Reckitt Benckiser. [ASP, VB, JavaScript, \textbf{Sql}]
 			\item Praca nad rozwojem NND Dynamic (jako główny developer) jednego z modułów systemu NND (flagowy produkt firmy).
 			\item Realizacja projektów: ``Suppliers Assortment``, ``Trainings`` oraz ``Holiday Request`` dla Reckitt Benckiser; ``Szkolenia BHP`` dla Mondi Świecie; ``Formularz Zgłoszeniowy`` dla Smurfit Kappa.
 			\item Główny udział w tworzeniu systemu EOD dla firmy Nutricia. Projekt obejmował realizację procesu rejestracji kontraktów, zamówień oraz faktur.
@@ -237,7 +242,7 @@
 	\cvSectionEntryBody{}
 	{
 		\begin{itemize}
-			\setlength\itemsep{0em}
+			\setlength\itemsep{-1pt}
 			\item Wydział Informatyki i Zarządzania • Kierunek: Informatyka
 			\item Uzyskany tytuł: magister (inżynieria komputerowa)
 			\item Praca magisterska: \textit{Implementacja teorii zbiorów przybliżonych w technologii Silverlight}
@@ -253,7 +258,7 @@
 	\cvSectionEntryBody{}
 	{
 		\begin{itemize}
-			\setlength\itemsep{0em}
+			\setlength\itemsep{-1pt}
 			\item Wydział Matematyki, Fizyki i Techniki • Kierunek: Informatyka
 			\item Uzyskany tytuł: inżynier
 			\item Praca inżynierska: \textit{Wykorzystanie sztucznej sieci neuronowej do prognozowania kursów walut}
@@ -272,13 +277,14 @@
 	\cvEnuItemBox
 	{
 		\begin{itemize}
-			\setlength\itemsep{0em}
-			\item Znajomość języka angielskiego w stopniu komunikatywnym
-			\item Amatorskie programowanie mikrokontrolerów AVR
-			\item Tworzenie gier mobilnych opartych o silnik Unity
-			\item Certyfikaty Microsoft: MCSD, MCP, MS (2014)
-			\item Ukończony kurs Cisco Certified Network Associate (2008 {\segoesym ➔} 2009)
-			\item Prawo jazdy kategorii B
+			\setlength\itemsep{-1pt}
+			\item Znajomość języka angielskiego w stopniu komunikatywnym.
+			\item Amatorskie programowanie mikrokontrolerów AVR.
+			\item Tworzenie gier mobilnych opartych o silnik Unity.
+			\item Certyfikaty Microsoft: MCSD, MCP, MS (2014).
+			\item Ukończony kurs Cisco Certified Network Associate (2008 {\segoesym ➔} 2009).
+			\item Prawo jazdy kategorii B.
+			\item Zainteresowania: strzelectwo (International Defensive Pistol Association), trójbój siłowy.
 		\end{itemize}
 	}
 }
@@ -290,7 +296,8 @@
 		\center
 		{
 			\fontsize{9pt}{1em}\selectfont
-			Wyrażam zgodę na przetwarzanie moich danych osobowych zawartych w ofercie pracy dla potrzeb procesu rekrutacji zgodnie z ustawą z dnia 27.08.1997r. Dz. U. z 2002 r., Nr 101, poz. 923 ze zm.
+			Wyrażam zgodę na przetwarzanie moich danych osobowych dla potrzeb niezbędnych do realizacji procesu rekrutacji.\\
+			Wyrażam zgodę na przetwarzanie moich danych osobowych w zakresie przyszłych procesów rekrutacyjnych.
 		}
 	}
 }
