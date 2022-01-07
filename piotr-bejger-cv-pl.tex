@@ -46,9 +46,9 @@
 		\color{fg}%
 		\begin{minipage}[t]{\textwidth}
 			\begin{flushright}\vspace{12pt}
-			\vspace{6pt}%
+			\vspace{8pt}%
 			{\fontsize{19pt}{1em}\addfontfeature{LetterSpace=7.0}\selectfont #1\hspace*{16pt}}\vspace{2pt}
-			\vspace{4pt}%
+			\vspace{6pt}%
 			\end{flushright}%
 		\end{minipage}%
 	}%
@@ -89,7 +89,7 @@
 {
 	\color{fg}
 	\begin{minipage}[t]{\textwidth}
-		\vspace{20pt}
+		\vspace{26pt}
 			\begin{minipage}[c]{0.37\textwidth}
 				\hfill\vfill
 			\end{minipage} %
@@ -109,7 +109,7 @@
 			\begin{minipage}[c]{0.01\textwidth}
 				\hfill\vfill
 			\end{minipage} %
-		\vspace{8pt}
+		\vspace{14pt}
 	\end{minipage}
 }
 
@@ -129,20 +129,49 @@
 			\item Doświadczenie w \textbf{TDD}.
 			\item Znajomość: \textbf{DDD, CQRS, Event Sourcing}.
 			\item Znajomość: \textbf{.NET} (framework/core), WPF (MVVM), WCF, WF, ASP.NET.
+			\item Znajmość: \textbf{Azure, Kubernetes, Docker}.
 			\item Znajomość: \textbf{Azure DevOps, Git}.
+			\item Umiejętność ekstrakcji wiedzy domenowej z wykorzystanie techniki \textbf{Event Storming}.
 			\item Doświadczenie w pracy w oparciu o \textbf{Scrum/Agile}.
 		\end{itemize}
 	}%
 }
 
+\vspace*{16pt}
+
 % DOSWIADCZENIE ZAWODOWE
 \switchColors
 \cvSectionHeader{Doświadczenie zawodowe}
 
+% Neuca
+\cvSectionEntry
+{
+	\cvSectionEntryHeader{❺}{Neuca (senior .NET developer)}{2021-04}{\cdot\cdot\cdot}
+
+	\cvSectionEntryBody{Wybrane osiągnięcia:}
+	{
+		\begin{itemize}
+			\setlength\itemsep{-1pt}
+			\item Budowa podsystemu obsługi zamówień:
+			\begin{itemize}
+			\setlength\itemsep{-1pt}
+				\item Ekstrakcja wiedzy domenowej przy pomocy techniki \textbf{Event Storming}.
+				\item Projekt architektury rozwiązania w oparciu o zebraną wiedzę.
+				\item Implementacja modułów systemu w oparciu o \textbf{DDD}.
+				\item Implementacja biblioteki pozwalającej na zastosowanie \textbf{Event Sourcingu} w oparciu o dowolną bazę danych (np. EventStore, CosmosDb) oraz implementacja microframeworka umożliwiającego pisanie w prosty, deklaratywny sposób \textbf{testów jednostkowych} w modułach wykorzystujących Event Sourcing i DDD.
+				\item Nadzorowanie prac, Code Review na przestrzeni całego projektu.
+				\item Umożliwienie uruchomienia rozwiązania zarówno on-premise jak i w \textbf{Azure} z wykorzystaniem natywnych usług Azure.
+				\item Wdrożenie systemu na Azure z wykorzystaniem \textbf{Kubernetes}.
+			\end{itemize}
+		\end{itemize}
+	}
+	\vspace{22pt}
+}
+
 % ProService Finteco
 \cvSectionEntry
 {
-	\cvSectionEntryHeader{❹}{ProService Finteco Sp. z o.o. (senior .NET developer / tech lead)}{2017-03}{\cdot\cdot\cdot}
+	\cvSectionEntryHeader{❹}{ProService Finteco Sp. z o.o. (senior .NET developer / tech lead)}{2017-03}{2021-03}
 
 	\cvSectionEntryBody{Wybrane osiągnięcia:}
 	{
@@ -154,11 +183,15 @@
 			\item Stworzenie mechanizmów i narzędzi do ułatwienia zarządzania konfiguracją systemu zarówno na środowiskach developerskich, jak i produkcyjnych. Dzięki temu uzyskano sprawniejszy i mniej ryzykowny deployment.
 		\end{itemize}
 	}
+	\vspace{22pt}
 }
+
+\pagebreak\vspace*{-11pt}
 
 % Bonair
 \cvSectionEntry
 {
+	\vspace{14pt}
 	\cvSectionEntryHeader{❸}{BONAIR S.A. (senior .NET developer)}{2013-07}{2017-02}
 
 	\cvSectionEntryBody{Wybrane osiągnięcia:}
@@ -174,10 +207,10 @@
 			\item Stworzenie aplikacji pozwalającej rejestrować zdarzenia komunikacyjne w Krakowie dla MPK Kraków. [\textbf{WPF, WCF}]
 		\end{itemize}
 	}
-	\vspace{53mm}
+	\vspace{28pt}
 }
 
-\pagebreak\vspace*{-11pt}
+
 
 % Oponeo.pl
 \cvSectionEntry
@@ -197,6 +230,7 @@
 			\item Wprowadzenie elementów programowania aspektowego (\textbf{AOP}) w kontekście walidacji argumentów metod. Rozwiązanie oparte o \textbf{Mono.Cecil}, pozwala na ``wstrzykiwanie`` kodu walidującego w języku \textbf{MSIL}.
 		\end{itemize}
 	}
+	\vspace{28pt}
 }
 
 % T Komp
@@ -214,6 +248,7 @@
 			\item Główny udział w tworzeniu systemu EOD dla firmy Nutricia. Projekt obejmował realizację procesu rejestracji kontraktów, zamówień oraz faktur.
 		\end{itemize}
 	}
+	\vspace{44pt}
 }
 
 % Centrum Onkologii
@@ -228,7 +263,10 @@
 			\item Nadzór dokumentacji medycznej.
 		\end{itemize}
 	}
+	\vspace{28pt}
 }
+
+\pagebreak\vspace*{0pt}
 
 % WYKSZTALCENIE
 \switchColors
@@ -266,7 +304,7 @@
 	}
 }
 
-\pagebreak\vspace*{-12pt}
+\vspace*{50pt}
 
 % DODATKOWE INFORMACJE
 \switchColors
@@ -279,15 +317,18 @@
 		\begin{itemize}
 			\setlength\itemsep{-1pt}
 			\item Znajomość języka angielskiego w stopniu komunikatywnym.
-			\item Amatorskie programowanie mikrokontrolerów AVR.
+			\item Amatorskie programowanie mikrokontrolerów AVR, STM32 bezpośrednio oraz na platoformach typu Arduino. Amatorskie IoT.
 			\item Tworzenie gier mobilnych opartych o silnik Unity.
 			\item Certyfikaty Microsoft: MCSD, MCP, MS (2014).
 			\item Ukończony kurs Cisco Certified Network Associate (2008 {\segoesym ➔} 2009).
 			\item Prawo jazdy kategorii B.
-			\item Zainteresowania: strzelectwo (International Defensive Pistol Association), trójbój siłowy.
+			\item Zainteresowania: strzelectwo (aktywny członek International Defensive Pistol Association jako zawodnik, safety officer oraz sędzia), trójbój siłowy.
 		\end{itemize}
 	}
+	\vspace{28pt}
 }
+
+\vspace*{220pt}
 
 \center
 {
